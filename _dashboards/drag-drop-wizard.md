@@ -56,7 +56,7 @@ To get started, follow the steps below to create a new visualization using the w
 
 1. Drag and drop field names from the left column into the Configuration panel to generate a visualization.
 
-Here’s an example visualization. Your visualization will look different depending on your data and the fields you select.
+Here’s an example visualization. Your visualization will look different depending on your data, the fields you select, and the visualization type.
 
 <img src="{{site.url}}{{site.baseurl}}/images/drag-drop-generated-viz.png" alt="Visualization generated using sample data in the Wizard">
 
