@@ -5,7 +5,7 @@ parent: Discover
 nav_order: 5
 ---
 
-The multiple data sources feature is an experimental feature released in OpenSearch 2.4. It can't be used in a production environment. For updates on the feature’s progress or to leave feedback on improving the feature, see the [OpenSearch Forum discussion](https://forum.opensearch.org/t/feedback-experimental-feature-connect-to-external-data-sources/11144).
+The Multiple Data Sources feature is an experimental feature released in OpenSearch 2.4. It can't be used in a production environment. For updates on the feature’s progress or to leave feedback on improving the feature, see the [OpenSearch Forum discussion](https://forum.opensearch.org/t/feedback-experimental-feature-connect-to-external-data-sources/11144).
 {: .note }
 
 # Multiple data sources
@@ -14,16 +14,16 @@ You can add multiple data sources to a single dashboard. OpenSearch Dashboards a
 
 In this tutorial we provide the steps for enabling the `data_source` setting in Dashboards; adding credentials, data source connections, and index patterns; and combining visualizations in a single dashboard.
 
-## Try out the multiple data sources feature in your local environment
+## Try out the Multiple Data Sources feature in your local environment
 
 This tutorial uses a preconfigured data source and index pattern, and you aren’t required to configure settings. However, you’ll need to enable the `data_source` setting in the configuration file before before getting started with exploring this feature.
 {: .note }
 
-The multiple data sources feature is experimental and can't be deployed into production. You can try it out with a sample data source and a sample index pattern. Before getting started, you must first edit the YAML configuration. The following section provides the steps for enabling the feature.
+The Multiple Data Sources feature is experimental and can't be deployed into production. You can try it out with a sample data source and a sample index pattern. Before getting started, you must first edit the YAML configuration. The following section provides the steps for enabling the feature.
 
-## Edit the YAML configuration to enable the multiple data sources feature
+## Edit the YAML configuration to enable the Multiple Data Sources feature
 
-Dashboards is configured in the cluster settings, and the multiple data sources feature is disabled by default. To enable it, you need to edit the configuration in `opensearch_dashboards.yml` and then restart the cluster.
+Dashboards is configured in the cluster settings, and the Multiple Data Sources feature is disabled by default. To enable it, you need to edit the configuration in `opensearch_dashboards.yml` and then restart the cluster.
 
 To enable the feature:
 
@@ -126,7 +126,7 @@ You have now explored the data sources experimental feature. We look forward to 
 
 The following limitations apply to the OpenSearch 2.4 release of this experimental feature:
 
-* The multiple data sources feature is supported for index-pattern-based visualizations only.
+* The Multiple Data Sources feature is supported for index-pattern-based visualizations only.
 * The visualization types Time Series Visual Builder (TSVB), Vega and Vega-Lite, and timeline are not supported.
 * External plugins, such as Gantt chart, and non-visualization plugins, such as the developer console, are not supported.
 
