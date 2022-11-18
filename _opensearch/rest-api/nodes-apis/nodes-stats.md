@@ -2,6 +2,7 @@
 layout: default
 title: Nodes stats
 parent: Nodes APIs
+grand_parent: REST API reference
 nav_order: 20
 ---
 
@@ -26,7 +27,7 @@ The following table lists the available path parameters. All path parameters are
 
 Parameter | Type | Description
 :--- | :--- | :---
-nodeId | String | A comma-separated list of nodeIds used to filter results. Supports [node filters]({{site.url}}{{site.baseurl}}/api-reference/nodes-apis/index/#node-filters). Defaults to `_all`.
+nodeId | String | A comma-separated list of nodeIds used to filter results. Supports [node filters]({{site.url}}{{site.baseurl}}/opensearch/rest-api/nodes-apis/index/#node-filters). Defaults to `_all`.
 metric | String | A comma-separated list of metric groups that will be included in the response. For example, `jvm,fs`. See the list of all metrics below. Defaults to all metrics.
 index_metric | String | A comma-separated list of index metric groups that will be included in the response. For example, `docs,store`. See the list of all index metrics below. Defaults to all index metrics.
 
@@ -119,7 +120,7 @@ GET _nodes/stats/
       "host" : "127.0.0.1",
       "ip" : "127.0.0.1:9300",
       "roles" : [
-        "cluster_manager",
+        "master",
         "data",
         "ingest",
         "remote_cluster_client"
@@ -595,7 +596,7 @@ name | String | The name of the node.
 transport_address | IP address | The host and port of the transport layer that is used by nodes in a cluster to communicate internally.
 host | IP address | The network host of the node.
 ip | IP address | The IP address and port of the node.
-roles | Array | The roles of the node (for example, `cluster_manager`, `data`, or `ingest`).
+roles | Array | The roles of the node (for example, `master`, `data`, or `ingest`).
 attributes | Object | The attributes of the node (for example, `shard_indexing_pressure_enabled`).
 [indices](#indices) | Object | Index statistics for each index that has shards on the node.
 [os](#os) | Object | Statistics about the OS for the node.
