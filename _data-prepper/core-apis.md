@@ -4,7 +4,7 @@ title: Core APIs
 nav_order: 2
 ---
 
-All Data Prepper instances expose a server with some control APIs. By default, this server runs on port 4900. Some plugins, especially Source plugins may expose other servers. These will be on different ports and their configurations are independent of the core API. For example, to shut down Data Prepper, you can run:
+All Data Prepper instances expose a server with some control APIs. By default, this server runs on port 4900. Some plugins, especially source plugins, may expose other servers. These will be on different ports and their configurations are independent of the core API. For example, to shut down Data Prepper, you can run:
 
 ```
 curl -X POST http://localhost:4900/shutdown
@@ -62,7 +62,7 @@ keyStorePassword: "secret"
 privateKeyPassword: "secret"
 ```
 
-For more information on configuring your Data Prepper server with SSL, see [Server Configuration](https://github.com/opensearch-project/data-prepper/blob/main/docs/configuration.md#server-configuration). If you are using a self-signed certificate, you can add the `-k` flag to quickly test out sending curl requests for the core APIs with SSL.
+For more information on configuring your Data Prepper server with SSL, see [Server Configuration](https://github.com/opensearch-project/data-prepper/blob/main/docs/configuration.md#server-configuration). If you are using a self-signed certificate, add the `-k` flag to quickly test out sending curl requests for the core APIs with SSL.
 
 ```
 curl -k -X POST https://localhost:4900/shutdown
@@ -70,7 +70,7 @@ curl -k -X POST https://localhost:4900/shutdown
 
 ## Authentication
 
-The Data Prepper Core APIs support HTTP Basic authentication. You can set the username and password with the following configuration in `data-prepper-config.yaml`:
+The Data Prepper Core APIs support HTTP Basic authentication. Set the username and password with the following configuration in `data-prepper-config.yaml`:
 
 ```yaml
 authentication:
@@ -79,22 +79,19 @@ authentication:
     password: "mys3cr3t"
 ```
 
-You can disable authentication of core endpoints using the following
-configuration. Use this with caution because the shutdown API and
-others will be accessible to anybody with network access to
-your Data Prepper instance.
+You can disable authentication of core endpoints using the following configuration. Use this with caution because the shutdown API and others will be accessible to anybody with network access to your Data Prepper instance.
 
 ```yaml
 authentication:
   unauthenticated:
 ```
 
-## Peer Forwarder
+## Peer forwarder
 Peer forwarder can be configured to enable stateful aggregation across multiple Data Prepper nodes. For more information on configuring Peer Forwarder, see [Peer Forwarder Configuration](https://github.com/opensearch-project/data-prepper/blob/main/docs/peer_forwarder.md).
 It is supported by `service_map_stateful`, `otel_trace_raw` and `aggregate` processors.
 
-## Shutdown Timeouts
-When the DataPrepper `shutdown` API is invoked, the sink and processor `ExecutorService`'s are given time to gracefully shutdown and clear any in-flight data. The default graceful shutdown timeout for these `ExecutorService`'s is 10 seconds. You can configure the timeout with the following optional parameters:
+## Shutdown timeouts
+When the Data Prepper `shutdown` API is invoked, the sink and processor `ExecutorService`'s are given time to gracefully shutdown and clear any in-flight data. The default graceful shutdown timeout for these `ExecutorService`'s is 10 seconds. You can configure the timeout with the following optional parameters:
 
 ```yaml
 processorShutdownTimeout: "PT15M"
