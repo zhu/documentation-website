@@ -12,33 +12,16 @@ curl -X POST http://localhost:4900/shutdown
 
 # APIs
 
-The following APIs are available:
+The following APIs are available.
 
-```
-GET /list
-POST /list
-```
-* lists running pipelines
+|             |                 |
+|-------------|-----------------|
+| API | Function |
+| `GET /list`<br> `POST /list` | Lists running pipelines. |
+| `POST /shutdown` | Starts a graceful shutdown of Data Prepper. |
+| `GET /metrics/prometheus`<br>`POST /metrics/prometheus`| Returns a scrape of the Data Prepper metrics in Prometheus text format. This API is provided as a `metricsRegistries` parameter in data prepper configuration file `data-prepper-config.yaml` has `Prometheus` as part of the registry.|
+| `GET /metrics/sys`<br>`POST /metrics/sys` | Returns JVM metrics in Prometheus text format. This API is provided as a `metricsRegistries` parameter in the Data Prepper configuration file `data-prepper-config.yaml` has `Prometheus` as part of the registry|
 
-```
-POST /shutdown
-```
-* starts a graceful shutdown of the Data Prepper
-
-```
-GET /metrics/prometheus
-POST /metrics/prometheus
-```
-* returns a scrape of the Data Prepper metrics in Prometheus text format. This API is available provided
-      `metricsRegistries` parameter in data prepper configuration file `data-prepper-config.yaml` has `Prometheus` as one
-      of the registry
-
-```
-GET /metrics/sys
-POST /metrics/sys
-```
-* returns JVM metrics in Prometheus text format. This API is available provided `metricsRegistries` parameter in data
-      prepper configuration file `data-prepper-config.yaml` has `Prometheus` as one of the registry
 
 # Configuring the server
 
