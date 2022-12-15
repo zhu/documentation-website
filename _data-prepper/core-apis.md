@@ -4,7 +4,7 @@ title: Core APIs
 nav_order: 2
 ---
 
-All Data Prepper instances expose a server with some control APIs. By default, this server runs on port 4900. Some plugins, especially source plugins, may expose other servers. These will be on different ports and their configurations are independent of the core API. For example, to shut down Data Prepper, you can run:
+All Data Prepper instances expose a server with some control APIs. By default, this server runs on port 4900. Some plugins, especially source plugins, may expose other servers. These will be on different ports, and their configurations are independent of the core API. For example, to shut down Data Prepper, you can run the following:
 
 ```
 curl -X POST http://localhost:4900/shutdown
@@ -12,15 +12,15 @@ curl -X POST http://localhost:4900/shutdown
 
 # APIs
 
-The following APIs are available.
+The following table lists the available APIs:
 
 |             |                 |
 |-------------|-----------------|
 | API | Function |
 | `GET /list`<br> `POST /list` | Lists running pipelines. |
 | `POST /shutdown` | Starts a graceful shutdown of Data Prepper. |
-| `GET /metrics/prometheus`<br>`POST /metrics/prometheus`| Returns a scrape of the Data Prepper metrics in Prometheus text format. This API is provided as a `metricsRegistries` parameter in the Data Prepper configuration file `data-prepper-config.yaml` and has `Prometheus` as part of the registry.|
-| `GET /metrics/sys`<br>`POST /metrics/sys` | Returns JVM metrics in Prometheus text format. This API is provided as a `metricsRegistries` parameter in the Data Prepper configuration file `data-prepper-config.yaml` and has `Prometheus` as part of the registry.|
+| `GET /metrics/prometheus`<br>`POST /metrics/prometheus`| Returns a scrape of the Data Prepper metrics in the Prometheus text format. This API is provided as a `metricsRegistries` parameter in the Data Prepper configuration file `data-prepper-config.yaml` and has `Prometheus` as part of the registry.|
+| `GET /metrics/sys`<br>`POST /metrics/sys` | Returns JVM metrics in the prometheus text format. This API is provided as a `metricsRegistries` parameter in the Data Prepper configuration file `data-prepper-config.yaml` and has `Prometheus` as part of the registry.|
 
 
 # Configuring the server
