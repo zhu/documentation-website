@@ -1,7 +1,7 @@
 ---
 layout: default
-title: How to create your first dashboard
+title: How to configure Dashboards
 parent: Contributor onboarding
-nav_order: 20
+nav_order: 5
 ---
 
