@@ -19,9 +19,10 @@ This tutorial series guides students through contributing to Dashboards developm
 - [How to install Dashboards plugins](https://opensearch.org/docs/latest/install-and-configure/install-dashboards/plugins/)
 - [How to create your first Dashboard](_link placceholder_)
 
-# Additional resource for getting started
+# Additional resources for getting started
 
 The following resources provide you with foundational information on contributing to Dashboards:
 
 - [Contribution Guidelines](https://github.com/opensearch-project/OpenSearch-Dashboards/blob/main/CONTRIBUTING.md)
 - [OpenSearch Terms](https://github.com/opensearch-project/documentation-website/blob/main/TERMS.md)
+- 
