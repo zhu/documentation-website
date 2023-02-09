@@ -113,12 +113,9 @@ POST _scripts/play_search_template
       "size": "{% raw %}{{size}}{{^size}}10{{/size}}{% endraw %}",
       "query": {
         "match": {
-          "play_name": "{{play_name}}"
+          "play_name": "{% raw %}{{play_name}}{% endraw %}"
         }
       }
-    },
-    "params": {
-      "play_name": "Henry IV"
     }
   }
 }
